@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: 'gothic_ultra_otregular',
+        Arial,
+        sans-serif;
+
+}
+
+h1 {
+    font-size: 400%;
+
+}
+
+h5,
+h6 {
+    font-family: 'Libre Baskerville',
+        Arial,
+        sans-serif;
+}
+
+
+
+.body {
+    color: #555753;
+    background: #d9e1cd;
+    line-height: 1.6;
+
+    /*
+    color: #7D775C;
+    color: #B7A5DF;
+    color: #D4CDDC;
+    color: #9685BA;
+    color: #988F5E;
+    color: #B3AE94;
+
+    color: #325050;
+    color: #a9b995;
+    background: #d9e1cd;
+
+    color: #fff;
+    background: #357d93;
+
+    background: #edf4f0;
+    color: #607476;
+    color: #49968e;
+     #d9e3dc;
+     color: #616857;
+     #a0b9ad
+     background: #3e5d67;
+
+     background: #134347;
+    */
+}
+
+.title-1 {
+    color: #C7111A;
+
+}
+
+.drop-cap::first-letter {
+    font-family: 'gothic_ultra_otregular';
+    color: #C7111A;
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+
+    xfont-weight: bold;
+    margin-right: .75em;
+}
+
+blockquote {
+    margin-bottom: 15px;
+    color: #828282;
+    border-left: 4px solid #e8e8e8;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.body-1 {
+    color: black;
+    line-height: 1.6;
+
+}
+
+.comment-1 {
+    color: black;
+    line-height: 1.6;
+}
+
+.verse-1 {
+    color: black;
+    line-height: 1.6;
+}
+
+.unknown {
+    color: black;
+    line-height: 1.6;
+}
+
+/*
+#f94144
+#f3722c
+#f8961e
+#f9c74f
+#90be6d
+#43aa8b
+#577590
+
+*/
