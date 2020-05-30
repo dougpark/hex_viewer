@@ -27,12 +27,38 @@ h6 {
         sans-serif;
 }
 
+y {
+    background: #eeeeee
+}
+
+z {
+    background: white
+}
+
+.xxbreak-height3 {
+    xxfont-size: .5em;
+    line-height: 12;
+    background: black;
+}
+
+.div-break {
+
+
+    border-bottom: 6px solid black;
+
+}
+
 
 
 .body {
     color: #555753;
     background: #d9e1cd;
-    line-height: 1.6;
+    /* 
+    font-family: monospace;
+    font-size: 18px;
+    line-height: .8; */
+
+    font: 1.5em/1em monospace;
 
     /*
     color: #7D775C;

@@ -14,7 +14,7 @@ $(document).ready(function () {
 function loadFile() {
 
     $.ajax({
-        url: "./the_gateless_gate.txt",
+        url: "./sample.txt",
         method: "GET",
         success: function (response) {
 
@@ -83,12 +83,63 @@ function disp(row, index, array) {
         })
 
     }
+    let spaceAfter = 0;
+
     if (row.comment) {
         $("#main").append('<hr style="width:50%;text-align:center;"></hr>');
 
         let text = row.comment;
         text.forEach(function (row) {
-            $("#main").append('<h6 class="comment-1 text-justify">' + row + '</h6>');
+            //var res = str.charCodeAt(4).toString(16);
+            //$("#hex").append('<span style="font-family: monospace">');
+            //$("#hex").append('<pre style="font-family: monospace" > ');
+
+            //for (var i = 0; i < row.length; i = i + 28) {
+
+            let newHex = '';
+            let newAscii = '';
+            let s = row; //.substring(0, row.length);
+            for (var j = 0; j < s.length; j++) {
+                let c = s.charCodeAt(j).toString(16);
+                if (j % 2 == 0) {
+                    newHex += '<z>' + c + '</z>';
+                } else {
+                    newHex += '<y>' + c + '</y>';
+                }
+                if (spaceAfter > 0) {
+                    if ((j + 1) % 4 == 0) {
+                        newHex += '&nbsp;';
+                    }
+                }
+            }
+            //$("#hex").append('<br>');
+            for (var j = 0; j < s.length; j++) {
+                let c = s.charAt(j)
+                let cc = s.charCodeAt(j);
+                if (cc <= 32 || cc >= 127) {
+                    c = '_'
+                }
+                if (j % 2 == 0) {
+                    newAscii += '<z>' + c + '&nbsp;</z>';
+                } else {
+                    newAscii += '<y>' + c + '&nbsp;</y>';
+                }
+                if (spaceAfter > 0) {
+                    if ((j + 1) % 4 == 0) {
+                        newAscii += '&nbsp;';
+                    }
+                }
+            }
+
+            newAscii = '<div class="div-break" >' + newAscii + '</div>';
+
+            //}
+            $("#hex").append(newHex + '<div class="break-height"></div>');
+            $("#hex").append(newAscii);
+            //$("#hex").append('<br>');
+            //$("#main").append(row);
+            //$("#hex").append('</pre>');
+            //$("#hex").append('</span>');
         })
 
     }
