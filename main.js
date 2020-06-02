@@ -83,7 +83,7 @@ function disp(row, index, array) {
         })
 
     }
-    let spaceAfter = 0;
+    let spaceAfter = 2;
 
     if (row.comment) {
         $("#main").append('<hr style="width:50%;text-align:center;"></hr>');
@@ -107,7 +107,7 @@ function disp(row, index, array) {
                     newHex += '<y>' + c + '</y>';
                 }
                 if (spaceAfter > 0) {
-                    if ((j + 1) % 4 == 0) {
+                    if ((j + 1) % spaceAfter == 0) {
                         newHex += '&nbsp;';
                     }
                 }
@@ -125,7 +125,7 @@ function disp(row, index, array) {
                     newAscii += '<y>' + c + '&nbsp;</y>';
                 }
                 if (spaceAfter > 0) {
-                    if ((j + 1) % 4 == 0) {
+                    if ((j + 1) % spaceAfter == 0) {
                         newAscii += '&nbsp;';
                     }
                 }
